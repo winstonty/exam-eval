@@ -1,0 +1,3 @@
+#ignore cleaned/data folders
+./cleaned/
+./data/

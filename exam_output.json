@@ -1,0 +1,709 @@
+[
+  {
+    "question_number": "Q2.1",
+    "question_body": "EvanBot configures a file-sharing application so that it can only access a specific folder instead of the entire filesystem.",
+    "answer_format": {
+      "type": "multiple_choice",
+      "options": [
+        "A) True",
+        "B) False"
+      ]
+    },
+    "correct_answer": {
+      "option": "A",
+      "text": "True"
+    }
+  },
+  {
+    "question_number": "Q2.2",
+    "question_body": "Running print buf will display the bytes in the local array buf.",
+    "answer_format": {
+      "type": "multiple_choice",
+      "options": [
+        "A) True",
+        "B) False"
+      ]
+    },
+    "correct_answer": {
+      "option": "B",
+      "text": "False"
+    }
+  },
+  {
+    "question_number": "Q2.3",
+    "question_body": "0xffffdc5c is the address on the stack where the RIP of caller is stored.",
+    "answer_format": {
+      "type": "multiple_choice",
+      "options": [
+        "A) True",
+        "B) False"
+      ]
+    },
+    "correct_answer": {
+      "option": "A",
+      "text": "True"
+    }
+  },
+  {
+    "question_number": "Q2.4",
+    "question_body": "0xffffdc60 is the address of the first byte of buf.",
+    "answer_format": {
+      "type": "multiple_choice",
+      "options": [
+        "A) True",
+        "B) False"
+      ]
+    },
+    "correct_answer": {
+      "option": "A",
+      "text": "True"
+    }
+  },
+  {
+    "question_number": "Q2.5",
+    "question_body": "0xde is the first byte of buf.",
+    "answer_format": {
+      "type": "multiple_choice",
+      "options": [
+        "A) True",
+        "B) False"
+      ]
+    },
+    "correct_answer": {
+      "option": "B",
+      "text": "False"
+    }
+  },
+  {
+    "question_number": "Q2.6",
+    "question_body": "Which of these properties should a pseudo-random function exhibit? Select all that apply.",
+    "answer_format": {
+      "type": "multiple_choice",
+      "options": [
+        "A) Deterministic",
+        "B) Efficient to compute",
+        "C) None of the above",
+        "D) Keyed",
+        "E) Randomized on every call"
+      ]
+    },
+    "correct_answer": {
+      "option": [
+        "A",
+        "D"
+      ],
+      "text": [
+        "Deterministic",
+        "Keyed"
+      ]
+    }
+  },
+  {
+    "question_number": "Q2.7",
+    "question_body": "If a function is one-way, it is guaranteed to be a collision-resistant hash function.",
+    "answer_format": {
+      "type": "multiple_choice",
+      "options": [
+        "A) True",
+        "B) False"
+      ]
+    },
+    "correct_answer": {
+      "option": "B",
+      "text": "False"
+    }
+  },
+  {
+    "question_number": "Q2.8",
+    "question_body": "An adversary with a polynomial-time factoring algorithm can break the hashed ElGamal encryption scheme.",
+    "answer_format": {
+      "type": "multiple_choice",
+      "options": [
+        "A) True",
+        "B) False"
+      ]
+    },
+    "correct_answer": {
+      "option": "B",
+      "text": "False"
+    }
+  },
+  {
+    "question_number": "Q2.9",
+    "question_body": "Merkle puzzles are more secure than Diffie-Hellman key exchange because they provide a larger asymptotic computational gap between the honest parties and the attacker.",
+    "answer_format": {
+      "type": "multiple_choice",
+      "options": [
+        "A) True",
+        "B) False"
+      ]
+    },
+    "correct_answer": {
+      "option": "B",
+      "text": "False"
+    }
+  },
+  {
+    "question_number": "Q2.10",
+    "question_body": "Deterministic encryption schemes can be secure against chosen-plaintext attacks.",
+    "answer_format": {
+      "type": "multiple_choice",
+      "options": [
+        "A) True",
+        "B) False"
+      ]
+    },
+    "correct_answer": {
+      "option": "B",
+      "text": "False"
+    }
+  },
+  {
+    "question_number": "Q3.1",
+    "question_body": "What goes in the blanks (1) - (3) in the stack diagram above?",
+    "answer_format": {
+      "type": "multiple_choice",
+      "options": [
+        "value",
+        "buf",
+        "canary"
+      ]
+    },
+    "correct_answer": {
+      "option": "value",
+      "text": "value"
+    }
+  },
+  {
+    "question_number": "Q3.2",
+    "question_body": "Which of the following memory safety vulnerabilities are present in this code? Select all.",
+    "answer_format": {
+      "type": "multiple_choice",
+      "options": [
+        "Format string vulnerability",
+        "Stack overflow",
+        "Signed/unsigned vulnerability"
+      ]
+    },
+    "correct_answer": {
+      "option": "None of the above",
+      "text": "None of the above"
+    }
+  },
+  {
+    "question_number": "Q3.5",
+    "question_body": "Provide an input to fread on Line 4 that would cause the program to execute SHELLCODE.",
+    "answer_format": {
+      "type": "free_response"
+    },
+    "correct_answer": "Input to fread on line 4: '\\x94\\xdc\\xff\\xff' + SHELLCODE + '\\x1c\\x00\\x00\\x00' + 'A' * 8 + '\\x70\\xdc\\xff\\xff'"
+  },
+  {
+    "question_number": "Q3.6",
+    "question_body": "Which changes would cause the correct exploit (without modification) to fail? Consider each choice independently. Select all that apply.",
+    "answer_format": {
+      "type": "multiple_choice",
+      "options": [
+        "Line 3: Change char buf[24]; to char buf[32];.",
+        "Line 4: Swap this line with line 5, so memcpy happens before fread.",
+        "Line 4: Change fread(buf, 40, 1, stdin); to fread(buf, 32, 1, stdin);."
+      ]
+    },
+    "correct_answer": {
+      "option": [
+        "Line 3: Change char buf[24]; to char buf[32];.",
+        "Line 4: Swap this line with line 5, so memcpy happens before fread.",
+        "Line 4: Change fread(buf, 40, 1, stdin); to fread(buf, 32, 1, stdin);."
+      ],
+      "text": [
+        "Line 3: Change char buf[24]; to char buf[32];.",
+        "Line 4: Swap this line with line 5, so memcpy happens before fread.",
+        "Line 4: Change fread(buf, 40, 1, stdin); to fread(buf, 32, 1, stdin);."
+      ]
+    }
+  },
+  {
+    "question_number": "Q3.7",
+    "question_body": "Would the correct exploit (without modification) fail if ASLR was enabled?",
+    "answer_format": {
+      "type": "multiple_choice",
+      "options": [
+        "Yes, because the absolute address of the stack changes every time the program runs.",
+        "Yes, because ASLR makes the stack non-executable, preventing the shellcode inside buf from running even if the RIP is overwritten.",
+        "No, because the relative distance between buf and the RIP remains constant regardless of the absolute address.",
+        "No, because ASLR only randomizes the location of the heap and shared libraries, not the stack where buf is located."
+      ]
+    },
+    "correct_answer": {
+      "option": "Yes, because the absolute address of the stack changes every time the program runs.",
+      "text": "Yes, because the absolute address of the stack changes every time the program runs."
+    }
+  },
+  {
+    "question_number": "Q4.1",
+    "question_body": "What goes in the blanks (1) - (3) in the stack diagram above?",
+    "answer_format": {
+      "type": "multiple_choice",
+      "options": [
+        "A) main",
+        "B) LeBron",
+        "C) Kyrie"
+      ]
+    },
+    "correct_answer": {
+      "option": "A) main",
+      "text": "main"
+    }
+  },
+  {
+    "question_number": "Q4.2",
+    "question_body": "What goes in the blanks (1) - (3) in the stack diagram above?",
+    "answer_format": {
+      "type": "multiple_choice",
+      "options": [
+        "A) main",
+        "B) LeBron",
+        "C) Kyrie"
+      ]
+    },
+    "correct_answer": {
+      "option": "B) LeBron",
+      "text": "LeBron"
+    }
+  },
+  {
+    "question_number": "Q4.3",
+    "question_body": "What goes in the blanks (1) - (3) in the stack diagram above?",
+    "answer_format": {
+      "type": "multiple_choice",
+      "options": [
+        "A) main",
+        "B) LeBron",
+        "C) Kyrie"
+      ]
+    },
+    "correct_answer": {
+      "option": "C) Kyrie",
+      "text": "Kyrie"
+    }
+  },
+  {
+    "question_number": "Q4.4",
+    "question_body": "What is the value (not the address) of the SFP of Kyrie?",
+    "answer_format": {
+      "type": "multiple_choice",
+      "options": [
+        "A) 0xffffdbe8",
+        "B) 0xffffdc30",
+        "C) 0xffffdc38",
+        "D) 0xffffdbec",
+        "E) 0xffffdc34"
+      ]
+    },
+    "correct_answer": {
+      "option": "B) 0xffffdc30",
+      "text": "The SFP of Kyrie points to the the SFP of the function that called it, hence the value of the SFP of Kyrie will be the address of the SFP of LeBron"
+    }
+  },
+  {
+    "question_number": "Q4.5",
+    "question_body": "What should Line 2 be in order to create a vulnerability that allows the attacker to execute SHELLCODE?",
+    "answer_format": {
+      "type": "multiple_choice",
+      "options": [
+        "A) printf(\"%d\")",
+        "B) printf(\"%c\")",
+        "C) printf(\"%hn\")",
+        "D) printf(\"%s\")",
+        "E) printf(\"%n\")"
+      ]
+    },
+    "correct_answer": {
+      "option": "C) printf(\"%hhn\")",
+      "text": "This creates a format-string vulnerability"
+    }
+  },
+  {
+    "question_number": "Q4.6",
+    "question_body": "What type of exploit can be constructed as a result of your answer to the previous subpart?",
+    "answer_format": {
+      "type": "multiple_choice",
+      "options": [
+        "A) Buffer Overflow",
+        "B) Off-by-one",
+        "C) Signed/unsigned vulnerability"
+      ]
+    },
+    "correct_answer": {
+      "option": "B) Off-by-one",
+      "text": "The exploit is an off-by-one style saved-frame-pointer exploit"
+    }
+  },
+  {
+    "question_number": "Q4.7",
+    "question_body": "Provide an input to fread on Line 6 that would cause the program to execute SHELLCODE, If a part of the input can be any non-zero value, use 'A' * n to represent n bytes of garbage.",
+    "answer_format": {
+      "type": "free_response"
+    },
+    "correct_answer": "Using printf(\"%hhn\"), printf consumes the next word on the stack as a pointer. In this calling setup, that word is the value of Kyrie\u2019s SFP, namely 0xffffdc30, which is the address of LeBron\u2019s SFP."
+  },
+  {
+    "question_number": "Q4.8",
+    "question_body": "Would the correct exploit (without modification) fail if Non-Executable Pages was enabled?",
+    "answer_format": {
+      "type": "multiple_choice",
+      "options": [
+        "A) Yes, because the CPU will refuse to execute instructions located on the stack, even if the RIP successfully points to them.",
+        "B) Yes, because Non-Executable Pages randomizes the stack addresses, making it impossible to determine the location of the shellcode."
+      ]
+    },
+    "correct_answer": {
+      "option": "A) Yes, because the CPU will refuse to execute instructions located on the stack, even if the RIP successfully points to them.",
+      "text": "Yes. With Non-Executable Pages enabled, the stack cannot be executed as code"
+    }
+  },
+  {
+    "question_number": "Q4.9",
+    "question_body": "Which addresses of the SFP of LeBron would prevent the type of exploit from Q4.7? Assume that the stack is shifted up/down accordingly and remains in-order. Select all that apply.",
+    "answer_format": {
+      "type": "multiple_choice",
+      "options": [
+        "A) 0xffffdc50",
+        "B) 0xffffdc20",
+        "C) 0xffffdbf0",
+        "D) 0xffffdc40",
+        "E) 0xffffdc10"
+      ]
+    },
+    "correct_answer": {
+      "option": "None of the above",
+      "text": "The exploit works only if zeroing the least significant byte of LeBron\u2019s saved frame pointer causes the new frame pointer used by main to land inside attacker-controlled buf"
+    }
+  },
+  {
+    "question_number": "Q5.1",
+    "question_body": "Alice sends (\ud835\udc5a, \ud835\udc61) where \ud835\udc61= MAC(\ud835\udc58, \ud835\udc5a). An attacker records one valid pair (\ud835\udc5a, \ud835\udc61). Which attack on the protocol above is still possible even if the MAC is EUF-CMA secure?",
+    "answer_format": {
+      "type": "multiple_choice",
+      "options": [
+        "Replay the exact same (\ud835\udc5a, \ud835\udc61) later and have Bob accept again.",
+        "Modify \ud835\udc5a into \ud835\udc5a\u2032 and compute a valid \ud835\udc61\u2032 for \ud835\udc5a\u2032.",
+        "Recover the MAC key \ud835\udc58 from (\ud835\udc5a, \ud835\udc61).",
+        "Distinguish MAC(\ud835\udc58, \u22c5) from a random function using one query."
+      ]
+    },
+    "correct_answer": {
+      "option": 0,
+      "text": "Replay the exact same (\ud835\udc5a, \ud835\udc61) later and have Bob accept again."
+    }
+  },
+  {
+    "question_number": "Q5.2",
+    "question_body": "Why does a perfectly secret one-time pad still fail to provide integrity?",
+    "answer_format": {
+      "type": "multiple_choice",
+      "options": [
+        "Because an attacker can flip bits in the ciphertext and predictably flip bits in the plaintext.",
+        "Because OTP ciphertexts are distinguishable from random.",
+        "Because OTP requires a PRG to be secure.",
+        "Because OTP decryption is non-deterministic."
+      ]
+    },
+    "correct_answer": {
+      "option": 0,
+      "text": "Because an attacker can flip bits in the ciphertext and predictably flip bits in the plaintext."
+    }
+  },
+  {
+    "question_number": "Q5.3",
+    "question_body": "What is the core risk in MAC-then-encrypt constructions that has enabled real attacks?",
+    "answer_format": {
+      "type": "multiple_choice",
+      "options": [
+        "The MAC key is sent in the clear.",
+        "The MAC is computed on ciphertext rather than plaintext.",
+        "The receiver decrypts attacker-controlled ciphertexts before checking integrity, leaking information via behavior/timing.",
+        "The scheme cannot be CPA secure."
+      ]
+    },
+    "correct_answer": {
+      "option": 2,
+      "text": "The receiver decrypts attacker-controlled ciphertexts before checking integrity, leaking information via behavior/timing."
+    }
+  },
+  {
+    "question_number": "Q5.4",
+    "question_body": "In CPA security for public-key encryption, the adversary:",
+    "answer_format": {
+      "type": "multiple_choice",
+      "options": [
+        "Must not see the public key.",
+        "Chooses two equal-length messages and receives an encryption of one of them under the public key.",
+        "Gets a decryption oracle for arbitrary ciphertexts.",
+        "Must guess the secret key."
+      ]
+    },
+    "correct_answer": {
+      "option": 1,
+      "text": "Chooses two equal-length messages and receives an encryption of one of them under the public key."
+    }
+  },
+  {
+    "question_number": "Q5.5",
+    "question_body": "In \u2018hashed ElGamal\u2019 (hybrid encryption), what is the ciphertext form for encrypting a message \ud835\udc40 to public key PK = \ud835\udc54\ud835\udc4e?",
+    "answer_format": {
+      "type": "multiple_choice",
+      "options": [
+        "\ud835\udc36= (\ud835\udc54ab, AE.Enc(\ud835\udc3b(\ud835\udc54\ud835\udc4f), \ud835\udc40)).",
+        "\ud835\udc36= (AE.Enc(\ud835\udc3b(\ud835\udc54ab), \ud835\udc40)) with no group element sent.",
+        "\ud835\udc36= (\ud835\udc54\ud835\udc4e, AE.Enc(\ud835\udc3b(\ud835\udc54\ud835\udc4e), \ud835\udc40)).",
+        "\ud835\udc36= (\ud835\udc54\ud835\udc4f, AE.Enc(\ud835\udc3b((\ud835\udc54\ud835\udc4e)\ud835\udc4f), \ud835\udc40)) for fresh random \ud835\udc4f."
+      ]
+    },
+    "correct_answer": {
+      "option": 3,
+      "text": "\ud835\udc36= (\ud835\udc54\ud835\udc4f, AE.Enc(\ud835\udc3b((\ud835\udc54\ud835\udc4e)\ud835\udc4f), \ud835\udc40)) for fresh random \ud835\udc4f."
+    }
+  },
+  {
+    "question_number": "Q5.6",
+    "question_body": "Why do many security proofs for this scheme model \ud835\udc3b as a random oracle rather than assuming only that \ud835\udc3b is collision resistant?",
+    "answer_format": {
+      "type": "multiple_choice",
+      "options": [
+        "Collision resistance already implies pseudorandomness, so random oracle is redundant.",
+        "The proof needs to \u2018program\u2019 \ud835\udc3b on adversary queries in a way not captured by collision resistance/one-wayness alone.",
+        "One-wayness of \ud835\udc3b is too strong and must be weakened to a random oracle assumption.",
+        "Random oracle is required only to argue correctness, not security."
+      ]
+    },
+    "correct_answer": {
+      "option": 1,
+      "text": "The proof needs to \u2018program\u2019 \ud835\udc3b on adversary queries in a way not captured by collision resistance/one-wayness alone."
+    }
+  },
+  {
+    "question_number": "Q5.7",
+    "question_body": "Which fact best explains why an honestly generated signature on \ud835\udc5a will always be accepted by the verifier?",
+    "answer_format": {
+      "type": "multiple_choice",
+      "options": [
+        "\ud835\udc3b is collision resistant.",
+        "\ud835\udc3b is one-way.",
+        "Invert(SK, \u22c5) is the inverse of \ud835\udc39(PK, \u22c5) on the domain.",
+        "The scheme is EUF-CMA secure."
+      ]
+    },
+    "correct_answer": {
+      "option": 3,
+      "text": "Invert(SK, \u22c5) is the inverse of \ud835\udc39(PK, \u22c5) on the domain."
+    }
+  },
+  {
+    "question_number": "Q5.8",
+    "question_body": "Which requirement is not part of the definition of a trapdoor one-way permutation?",
+    "answer_format": {
+      "type": "multiple_choice",
+      "options": [
+        "KeyGen outputs (SK, PK).",
+        "\ud835\udc39(PK, \u22c5) is efficiently computable and is a permutation over a domain \ud835\udc4b.",
+        "Invert(SK, \u22c5) efficiently computes the inverse of \ud835\udc39(PK, \u22c5).",
+        "\ud835\udc39(PK, \u22c5) is collision resistant over \ud835\udc4b."
+      ]
+    },
+    "correct_answer": {
+      "option": 4,
+      "text": "\ud835\udc39(PK, \u22c5) is collision resistant over \ud835\udc4b."
+    }
+  },
+  {
+    "question_number": "Q5.9",
+    "question_body": "Why is using a non-cryptographic PRNG to generate cryptographic keys dangerous?",
+    "answer_format": {
+      "type": "multiple_choice",
+      "options": [
+        "Non-cryptographic PRNGs are often too inefficient for repeated cryptographic use.",
+        "Non-cryptographic PRNGs often leak enough data that observing enough outputs lets an attacker predict future outputs/state.",
+        "Non-cryptographic PRNGs often fail enough statistical checks that attackers can directly recover hidden keys.",
+        "Non-cryptographic PRNGs often produce only short outputs at a time."
+      ]
+    },
+    "correct_answer": {
+      "option": 2,
+      "text": "Non-cryptographic PRNGs often leak enough data that observing enough outputs lets an attacker predict future outputs/state."
+    }
+  },
+  {
+    "question_number": "Q6.1",
+    "question_body": "Is \ud835\udda7(\ud835\udc4e, \ud835\udc4f) = \ud835\udc4e\u2016\ud835\udc53(\ud835\udc4f) a CRHF?",
+    "answer_format": {
+      "type": "free_response"
+    },
+    "correct_answer": "Yes (leave the boxes blank)"
+  },
+  {
+    "question_number": "Q6.2",
+    "question_body": "Does \ud835\udda7(\ud835\udc4e, \ud835\udc4f) = \ud835\udc4e\u2016\ud835\udc53(\ud835\udc4f) possess one-wayness?",
+    "answer_format": {
+      "type": "multiple_choice",
+      "options": [
+        "Yes, because an attacker must still invert \ud835\udc53(\ud835\udc4f) to find the complete pre-image (\ud835\udc4e, \ud835\udc4f).",
+        "Yes, because it is computationally difficult to determine where \ud835\udc4e ends and \ud835\udc53(\ud835\udc4f) begins.",
+        "No, because the first part of the input (\ud835\udc4e) is leaked directly in the output.",
+        "No, because the output length is strictly greater than the input length."
+      ]
+    },
+    "correct_answer": {
+      "option": 1,
+      "text": "Yes, because an attacker must still invert \ud835\udc53(\ud835\udc4f) to find the complete pre-image (\ud835\udc4e, \ud835\udc4f)."
+    }
+  },
+  {
+    "question_number": "Q6.3",
+    "question_body": "Is \ud835\udda7(\ud835\udc4e, \ud835\udc4f) = 0\ud835\udc5b\u2016\ud835\udc53(\ud835\udc4e) a CRHF?",
+    "answer_format": {
+      "type": "free_response"
+    },
+    "correct_answer": "No (fill in the boxes)"
+  },
+  {
+    "question_number": "Q6.4",
+    "question_body": "Does \ud835\udda7(\ud835\udc4e, \ud835\udc4f) = 0\ud835\udc5b\u2016\ud835\udc53(\ud835\udc4e) possess one-wayness?",
+    "answer_format": {
+      "type": "multiple_choice",
+      "options": [
+        "Yes, because fixing the first \ud835\udc5b bits prevents collisions across different inputs, which is enough to make it one-way.",
+        "Yes, because an attacker still needs to invert \ud835\udc53(\ud835\udc4e) to find a valid \ud835\udc4e for the pre-image.",
+        "No, because the construction leaks \ud835\udc4f directly in the output, so inverting is trivial by reading \ud835\udc4f.",
+        "No, because the output only covers strings with prefix 0\ud835\udc5b, so the function cannot be one-way for all outputs."
+      ]
+    },
+    "correct_answer": {
+      "option": 1,
+      "text": "Yes, because fixing the first \ud835\udc5b bits prevents collisions across different inputs, which is enough to make it one-way."
+    }
+  },
+  {
+    "question_number": "Q6.5",
+    "question_body": "Is \ud835\udda7(\ud835\udc4e, \ud835\udc4f) = \ud835\udc3a(\ud835\udc3a(\ud835\udc4e, \ud835\udc4f)) a CRHF?",
+    "answer_format": {
+      "type": "multiple_choice",
+      "options": [
+        "Yes (explain your answer below)",
+        "No (explain your answer below)"
+      ]
+    },
+    "correct_answer": {
+      "option_letter": "B",
+      "text": "No (explain your answer below)"
+    }
+  },
+  {
+    "question_number": "Q6.6",
+    "question_body": "Does \ud835\udda7(\ud835\udc4e, \ud835\udc4f) = \ud835\udc3a(\ud835\udc3a(\ud835\udc4e, \ud835\udc4f)) possess one-wayness?",
+    "answer_format": {
+      "type": "multiple_choice",
+      "options": [
+        "Yes, because \ud835\udc4e is not used to compute the output \ud835\udda7(\ud835\udc4e, \ud835\udc4f).",
+        "Yes, because \ud835\udc4f is not used to compute the output \ud835\udda7(\ud835\udc4e, \ud835\udc4f).",
+        "No, because the output is a constant for all inputs, making inversion trivial.",
+        "No, because the output length is smaller than the input length, which always breaks one-wayness."
+      ]
+    },
+    "correct_answer": {
+      "option_letter": "C",
+      "text": "No, because the output is a constant for all inputs, making inversion trivial."
+    }
+  },
+  {
+    "question_number": "Q6.7",
+    "question_body": "Is \ud835\udda7(\ud835\udc4e, \ud835\udc4f) = \ud835\udc4e\u2295\ud835\udc4f\u2295\ud835\udc53(\ud835\udc4e\u2295\ud835\udc4f) a CRHF?",
+    "answer_format": {
+      "type": "multiple_choice",
+      "options": [
+        "Yes (leave the boxes blank)",
+        "No (fill in the boxes)"
+      ]
+    },
+    "correct_answer": {
+      "option_letter": "B",
+      "text": "No (fill in the boxes)"
+    }
+  },
+  {
+    "question_number": "Q6.8",
+    "question_body": "Is \ud835\udda7(\ud835\udc4e, \ud835\udc4f) = \ud835\udc4e\ud835\udc4fmod \ud835\udc5d a CRHF?",
+    "answer_format": {
+      "type": "multiple_choice",
+      "options": [
+        "Yes (leave the boxes blank)",
+        "No (fill in the boxes)"
+      ]
+    },
+    "correct_answer": {
+      "option_letter": "B",
+      "text": "No (fill in the boxes)"
+    }
+  },
+  {
+    "question_number": "Q7.1",
+    "question_body": "Which of the following should fill in the blank in Step 2?",
+    "answer_format": {
+      "type": "multiple_choice",
+      "options": [
+        "\ud835\udc4bmod \ud835\udc5d",
+        "\ud835\udc4c\ud835\udc65mod \ud835\udc5d",
+        "\ud835\udc54\ud835\udc4b\ud835\udc4cmod \ud835\udc5d",
+        "\ud835\udc4cmod \ud835\udc5d",
+        "\ud835\udc4b\ud835\udc66mod \ud835\udc5d",
+        "\ud835\udc54mod \ud835\udc5d",
+        "\ud835\udc4b\ud835\udc4cmod \ud835\udc5d",
+        "\ud835\udc54\ud835\udc65+\ud835\udc66mod \ud835\udc5d",
+        "\ud835\udc54\ud835\udc54mod \ud835\udc5d"
+      ]
+    },
+    "correct_answer": {
+      "option_letter": "D",
+      "text": "\ud835\udc4b\ud835\udc66mod \ud835\udc5d"
+    }
+  },
+  {
+    "question_number": "Q7.2",
+    "question_body": "Which of the following should fill in the blank in Step 3?",
+    "answer_format": {
+      "type": "multiple_choice",
+      "options": [
+        "\ud835\udc4bmod \ud835\udc5d",
+        "\ud835\udc4c\ud835\udc65mod \ud835\udc5d",
+        "\ud835\udc54\ud835\udc4b\ud835\udc4cmod \ud835\udc5d",
+        "\ud835\udc4cmod \ud835\udc5d",
+        "\ud835\udc4b\ud835\udc66mod \ud835\udc5d",
+        "\ud835\udc54mod \ud835\udc5d",
+        "\ud835\udc4b\ud835\udc4cmod \ud835\udc5d",
+        "\ud835\udc54\ud835\udc65+\ud835\udc66mod \ud835\udc5d",
+        "\ud835\udc54\ud835\udc54mod \ud835\udc5d"
+      ]
+    },
+    "correct_answer": {
+      "option_letter": "B",
+      "text": "\ud835\udc4c\ud835\udc65mod \ud835\udc5d"
+    }
+  },
+  {
+    "question_number": "Q7.3",
+    "question_body": "Suppose Alice and Bob know authentic (pk\ud835\udc34, pk\ud835\udc35) in advance. Why is the protocol secure against a man-in-the-middle attack by Mallory?",
+    "answer_format": {
+      "type": "multiple_choice",
+      "options": [
+        "Because Enc is IND-CPA secure, Mallory cannot read \ud835\udc36\ud835\udc34 or \ud835\udc36\ud835\udc35, so MITM is impossible.",
+        "Because each party signs the full transcript (\ud835\udc4b\u2016 \ud835\udc4c) under an authentic public key, Mallory cannot alter \ud835\udc4b or \ud835\udc4c (or swap in her own values) without causing signature verification to fail; she can relay messages but cannot make either party accept a key that Mallory knows.",
+        "Because \ud835\udda7 is collision resistant, Mallory cannot create a collision that would let her impersonate either party.",
+        "Because Diffie\u2013Hellman alone is already secure against MITM, the signatures are unnecessary."
+      ]
+    },
+    "correct_answer": {
+      "option_letter": "B",
+      "text": "Because each party signs the full transcript (\ud835\udc4b\u2016 \ud835\udc4c) under an authentic public key, Mallory cannot alter \ud835\udc4b or \ud835\udc4c (or swap in her own values) without causing signature verification to fail; she can relay messages but cannot make either party accept a key that Mallory knows."
+    }
+  }
+]

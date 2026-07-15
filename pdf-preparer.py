@@ -22,8 +22,8 @@ import warnings # suppress torch warnings
 #############
 
 # Initialize reader once (downloads models on first run)
-reader = easyocr.Reader(['en'], gpu=False)  # set gpu=False if no CUDA
-warnings.filterwarnings("ignore", category=UserWarning, module='torch')  # suppress torch warnings
+warnings.filterwarnings("ignore", category=UserWarning)  # suppress torch warnings
+reader = easyocr.Reader(['en'], gpu=False, )  # set gpu=False if no CUDA
 
 #############
 #  Helpers  #
@@ -41,7 +41,7 @@ def ocr_pdf(pdf_path):
     
     for page in doc:
         # Render page to image
-        pix = page.get_pixmap(dpi=300)
+        pix = page.get_pixmap(dpi=360)
         img = Image.frombytes("RGB", [pix.width, pix.height], pix.samples)
         
         # EasyOCR expects numpy array
@@ -79,7 +79,7 @@ Return a JSON array of question objects. Only return valid JSON, nothing else.
     response = ollama.chat(
         model='llama3.1:8b',
         messages=[{'role': 'user', 'content': prompt}],
-        options={'temperature': 0.1, 'num_ctx': 8192}
+        options={'temperature': 0.05, 'num_ctx': 8192}
     )
     
     response_text = response['message']['content']
@@ -90,6 +90,32 @@ Return a JSON array of question objects. Only return valid JSON, nothing else.
         response_text = response_text.split("```")[1].split("```")[0]
     
     return json.loads(response_text)
+
+def smart_chunk(text, max_chars=6400):
+    """Split on question boundaries instead of arbitrary positions."""
+    import re
+    
+    # Common question boundary patterns
+    # Adjust regex to match your exam format
+    pattern = r'\n(?=\s*(?:Question\s+\d|Q\d|\d+[\.\)]\s|Part\s+[A-Z]))'
+    
+    questions = re.split(pattern, text)
+    
+    chunks = []
+    current_chunk = ""
+    
+    for q in questions:
+        if len(current_chunk) + len(q) < max_chars:
+            current_chunk += q
+        else:
+            if current_chunk:
+                chunks.append(current_chunk)
+            current_chunk = q
+    
+    if current_chunk:
+        chunks.append(current_chunk)
+    
+    return chunks
 
 
 ########################
@@ -121,8 +147,7 @@ def process_exam(file_path, output_path="exam_output.json"):
     print(f"Extracted {len(text)} characters")
     
     # Step 2: Chunk and parse with LLM
-    max_chars = 6000
-    chunks = [text[i:i+max_chars] for i in range(0, len(text), max_chars)]
+    chunks = smart_chunk(text, 4800)
     
     all_questions = []
     for i, chunk in enumerate(chunks):
@@ -140,10 +165,6 @@ def process_exam(file_path, output_path="exam_output.json"):
     # Step 3: Validate and save
     validated = validate_questions(all_questions)
     
-    with open(output_path, 'w') as f:
-        json.dump(validated, f, indent=2)
-    
-    print(f"Saved {len(validated)} questions to {output_path}")
     return validated
 
 def validate_questions(questions):
@@ -177,7 +198,7 @@ def prepare_multiple(fns):
             print("Written to ./cleaned/" + fn.split("/")[1].split(".")[0] + "-cleaned.json")
 
 if __name__ == "__main__":
-    print("Enter path to filename of exam to process (PDF, image, or text):")
+    print("\nEnter path to filename of exam to process (PDF, image, or text): ", end="")
     fn = input().strip()
     if Path(fn).exists():
         exam = process_exam(fn)

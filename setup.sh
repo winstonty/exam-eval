@@ -4,3 +4,4 @@ pip3 install pymupdf
 pip3 install ollama
 
 curl -fsSL https://ollama.com/install.sh | sh
+ollama pull llama3.1:8b
